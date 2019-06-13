@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ChildComponent :numbers="numbers" />
+        <ChildComponent :numbers="numbers" @number-added="numbers.push($event)" />
     </div>
 </template>
 
@@ -13,6 +13,9 @@ export default {
         return {
             numbers: [1, 2, 3, 4, 5]
         };
+    }, 
+    components: {
+        ChildComponent
     }
 };
 </script>
