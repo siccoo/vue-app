@@ -7,6 +7,6 @@ import NumberDisplay from '../component/NumberDisplay';
 
 new Vue({
   el: '#app',
-  render: h => h(NumberSubmit)
+  render: h => h(NumberDisplay)
 })
 

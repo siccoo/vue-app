@@ -6,19 +6,19 @@
 </template>
 
 <script>
-
-import { EventBus } from '../src/event-bus.js';
+import { store } from '../src/store'
+// import { EventBus } from '../src/event-bus.js';
 
 export default {
     name: "NumberSumbit",
     data() {
         return {
-            number: 0
+            numberInput: 0
         };
     },
     methods: {
-        addNumber() {
-            EventBus.$emit("number-added", Number(this.number));
+        addNumber(numberInput) {
+            store.addNumber(Number(numberInput));
         }
     }
 };
