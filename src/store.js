@@ -4,5 +4,11 @@ export const store = {
     }, 
     addNumber(newNumber) {
         this.state.number.push(newNumber);
+    },
+    removeLastNumber() {
+        this.state.number.pop()
+    },
+    reverseNumbers() {
+        this.state.number.reverse()
     }
 };
