@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { store } from '../src/store'
+// import { store } from '../src/store'
 // import { EventBus } from '../src/event-bus.js';
 
 export default {
@@ -18,7 +18,7 @@ export default {
     },
     methods: {
         addNumber(numberInput) {
-            store.addNumber(Number(numberInput));
+            this.$store.dispatch("addNumber", Number(numberInput));
         }
     }
 };
