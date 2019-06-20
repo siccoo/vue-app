@@ -5,6 +5,7 @@ import ParentComponent from '../component/ParentComponent';
 import ChildComponent from '../component/ChildComponent';
 import NumberSubmit from '../component/NumberSubmit';
 import NumberDisplay from '../component/NumberDisplay';
+import router from './router';
 
 Vue.config.productionTip = false;
 
