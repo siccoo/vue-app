@@ -4,13 +4,16 @@
 import App from '@/App';
 import { shallowMount } from '@vue/test-utils';
 
+// describe callback() function
 describe('App', () => {
     let wrapper;
 
+    // beforeEach callback() function
     beforeEach(() => {
         wrapper = shallowMount(App);
     });
 
+    // it callback() function
     it('should render correct contents', () => {
         let wrapper = shallowMount(App);
         // const Constructor = Vue.extend(App);
@@ -43,6 +46,7 @@ describe('App', () => {
             inputField.trigger('keyup.enter');
             const removeIcon = wrapper.find(".destroy");
 
+            // removeIcon variable
             removeIcon.trigger("click");
 
             expect(wrapper.vm.todos).toEqual(['New Todo']);
