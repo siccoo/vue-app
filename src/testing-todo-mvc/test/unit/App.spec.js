@@ -26,10 +26,23 @@ describe('App', () => {
     });
 
     describe('user populates the text input field', () => {
-        it('should update "newTodo"', () => {});
+        let inputField;
+
+        beforeEach(() => {
+            inputField = wrapper.find('.new-todo');
+            inputField.element.value = 'New Todo';
+            inputField.trigger('input');
+        });
+
+        it('should update "newTodo"', () => {
+            expect(wrapper.vm.newTodo).toEqual('New Todo');
+        });
     
     describe('and presses Enter', () => {
-        it('should add a new todo to "todos"', () => {});
+        it('should add a new todo to "todos"', () => {
+            inputField.trigger('keyup.enter')
+            expect(wrapper.vm.todos).toEqual(['New Todo'])
+        });
     });
 
     describe('and presses Enter + removes todo', () => {
